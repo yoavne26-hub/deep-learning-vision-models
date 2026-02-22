@@ -24,7 +24,7 @@ python MNISTtrainingNN.py
 ## Results
 
 ### Training Accuracy Curve
-![Accuracy Curve](images/Dense NN1.png)
+![Accuracy Curve](dense-from-scratch/images/Dense NN1.png)
 
 ### Training Loss Curve
 ![Loss Curve](images/Dense NN2.png)
