@@ -29,7 +29,7 @@ The progression reflects a deliberate transition from mathematical foundations (
 | Model | Framework | Task | Test Accuracy |
 |-------|----------|------|---------------|
 | Dense Neural Network | NumPy | MNIST Digits | 89.9% |
-| CNN from Scratch | NumPy | MNIST Digits | ~95% |
+| CNN from Scratch | NumPy | MNIST Digits | NA |
 | CNN | PyTorch | MNIST Digits | ~98% |
 | CNN | PyTorch | Sign Language MNIST | ~98–99% |
 
