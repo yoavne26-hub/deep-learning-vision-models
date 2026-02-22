@@ -29,6 +29,7 @@ This project implements a fully connected neural network from first principles u
 pip install numpy pandas matplotlib
 python MNISTtrainingNN.py
 
+
 ---
 
 
