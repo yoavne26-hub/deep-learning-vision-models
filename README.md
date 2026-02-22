@@ -92,6 +92,16 @@ The NumPy implementations avoid automatic differentiation entirely, reinforcing 
 This progression ensures conceptual mastery rather than framework dependency.
 
 ---
+
+## Personal Note
+
+This entire repository was built through self-directed learning.
+
+The goal was not only to achieve high accuracy, but to deeply understand how neural networks operate — from mathematical derivation to practical implementation.
+
+If you have suggestions, improvements, or technical feedback, I would genuinely appreciate hearing them. Constructive input is always welcome.
+
+---
 ## Repository Structure
 
 ```text
@@ -118,14 +128,3 @@ deep-learning-vision-models/
 
 ---
 
----
-
-## Personal Note
-
-This entire repository was built through self-directed learning.
-
-The goal was not only to achieve high accuracy, but to deeply understand how neural networks operate — from mathematical derivation to practical implementation.
-
-If you have suggestions, improvements, or technical feedback, I would genuinely appreciate hearing them. Constructive input is always welcome.
-
----
