@@ -23,11 +23,11 @@ Conv → ReLU → Conv → ReLU → MaxPool → Flatten → Fully Connected → 
 ---
 
 ## Features
--GPU acceleration (CUDA support)
--Mini-batch training
--Train & validation tracking
--Learning curve visualization
--Single image prediction testing
+- GPU acceleration (CUDA support)
+- Mini-batch training
+- Train & validation tracking
+- Learning curve visualization
+- Single image prediction testing
 
 ---
 
