@@ -33,30 +33,6 @@ The progression reflects a deliberate transition from mathematical foundations (
 | CNN | PyTorch | MNIST Digits | ~98% |
 | CNN | PyTorch | Sign Language MNIST | ~98–99% |
 
----
-## Repository Structure
-
-```text
-deep-learning-vision-models/
-├── dense-from-scratch/
-│   ├── MNISTtrainingNN.py
-│   ├── README.md
-│   └── images/
-│
-├── cnn-from-scratch-numpy/
-│   ├── MNISTNumPyCNN.py
-│   ├── README.md
-│   └── images/
-│
-├── mnist-pytorch/
-│   ├── MNISTPyTorchCNN.py
-│   ├── README.md
-│   └── images/
-│
-└── sign-language-pytorch/
-    ├── MNISTSignLanguagePyTorchCNN.py
-    ├── README.md
-    └── images/
 
 ---
 
@@ -114,6 +90,31 @@ Key theoretical components implemented manually:
 The NumPy implementations avoid automatic differentiation entirely, reinforcing a deep understanding of gradient flow, tensor shapes, and optimization mechanics before transitioning to PyTorch.
 
 This progression ensures conceptual mastery rather than framework dependency.
+
+---
+## Repository Structure
+
+```text
+deep-learning-vision-models/
+├── dense-from-scratch/
+│   ├── MNISTtrainingNN.py
+│   ├── README.md
+│   └── images/
+│
+├── cnn-from-scratch-numpy/
+│   ├── MNISTNumPyCNN.py
+│   ├── README.md
+│   └── images/
+│
+├── mnist-pytorch/
+│   ├── MNISTPyTorchCNN.py
+│   ├── README.md
+│   └── images/
+│
+└── sign-language-pytorch/
+    ├── MNISTSignLanguagePyTorchCNN.py
+    ├── README.md
+    └── images/
 
 ---
 
