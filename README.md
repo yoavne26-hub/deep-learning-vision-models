@@ -118,6 +118,8 @@ deep-learning-vision-models/
 
 ---
 
+---
+
 ## Personal Note
 
 This entire repository was built through self-directed learning.
