@@ -23,16 +23,6 @@ This project implements a fully connected neural network from first principles u
 
 ---
 
-## How to Run
-
-```bash
-pip install numpy pandas matplotlib
-python MNISTtrainingNN.py
-
-
----
----
-
 
 ## Results
 ### Training Accuracy Curve
@@ -51,3 +41,14 @@ python MNISTtrainingNN.py
 - Training Accuracy: 89.3%
 - Validation Accuracy: 86.8%
 - Test Accuracy: 89.9%
+
+---
+
+## How to Run
+
+```bash
+pip install numpy pandas matplotlib
+python MNISTtrainingNN.py
+
+
+---
