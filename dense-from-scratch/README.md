@@ -1,4 +1,3 @@
-send the# Dense Neural Network from Scratch (NumPy)
 
 This project implements a fully connected neural network from first principles using NumPy.
 
