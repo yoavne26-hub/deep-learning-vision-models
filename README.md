@@ -20,7 +20,6 @@ This repository demonstrates progression from first-principles neural networks t
 
 ```text
 deep-learning-vision-models/
-│
 ├── dense-from-scratch/
 │   ├── MNISTtrainingNN.py
 │   ├── README.md
