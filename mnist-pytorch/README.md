@@ -50,10 +50,10 @@ Conv → ReLU → Conv → ReLU → MaxPool → Flatten → Fully Connected → 
 ![Loss Curve For Epoch](images/CNN_Digit4.png)
 
 ### Learning Curve (Accuracy X Batch)
-![Accuracy Curve For Batch](images/CNN_Digit2.png)
+![Accuracy Curve For Batch](images/CNN_Digit2.jpeg)
 
 ### Learning Curve (Loss X Batch)
-![Loss Curve For Batch](images/CNN_Digit1.png)
+![Loss Curve For Batch](images/CNN_Digit1.jpeg)
 
 ### Example
 ![Example](images/CNN_Digit5.png)
@@ -62,9 +62,9 @@ Conv → ReLU → Conv → ReLU → MaxPool → Flatten → Fully Connected → 
 
 ## Performance
 
-- Train Accuracy: XX.X%
-- Validation Accuracy: XX.X%
-- Test Accuracy: XX.X%
+- Train Accuracy: 99.4%
+- Validation Accuracy: 98.8%
+- Test Accuracy: 98.2%
 
 ---
 
