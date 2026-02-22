@@ -33,7 +33,6 @@ python MNISTtrainingNN.py
 
 
 ## Results
-
 ### Training Accuracy Curve
 ![Accuracy Curve](images/Dense_NN1.png)
 
