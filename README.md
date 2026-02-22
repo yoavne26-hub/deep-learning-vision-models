@@ -57,3 +57,72 @@ deep-learning-vision-models/
     ├── MNISTSignLanguagePyTorchCNN.py
     ├── README.md
     └── images/
+
+---
+
+## Methodology
+
+Each project in this repository follows a structured experimental workflow:
+
+### 1. Data Preparation
+- Dataset loading and normalization
+- Label remapping where required
+- Train / validation / test splitting
+- Data augmentation (for CNN models)
+
+### 2. Model Design
+- Architecture selection based on task complexity
+- Progressive increase in model depth
+- Use of convolutional layers for spatial feature extraction
+- Application of regularization (Dropout, BatchNorm, L2)
+
+### 3. Optimization Strategy
+- CrossEntropyLoss for multi-class classification
+- Adam / AdamW optimizers
+- Weight decay for generalization
+- Monitoring both accuracy and loss per epoch
+
+### 4. Evaluation
+- Learning curve visualization
+- Confusion matrix analysis
+- Detection of overfitting behavior
+- Class-wise performance inspection
+
+This structured pipeline was consistently applied across all implementations to ensure fair comparison and reproducibility.
+
+---
+
+## Mathematical Foundations
+
+The early stages of this repository focus on understanding neural networks at a mathematical level.
+
+Key theoretical components implemented manually:
+
+- Linear transformations:  
+  \( Z = W X + b \)
+
+- Activation functions (ReLU, Softmax)
+
+- Cross-Entropy Loss:  
+  \( L = - \sum y \log(\hat{y}) \)
+
+- Backpropagation using chain rule differentiation
+
+- Gradient descent updates:  
+  \( W := W - \alpha \frac{\partial L}{\partial W} \)
+
+The NumPy implementations avoid automatic differentiation entirely, reinforcing a deep understanding of gradient flow, tensor shapes, and optimization mechanics before transitioning to PyTorch.
+
+This progression ensures conceptual mastery rather than framework dependency.
+
+---
+
+## Personal Note
+
+This entire repository was built through self-directed learning.
+
+The goal was not only to achieve high accuracy, but to deeply understand how neural networks operate — from mathematical derivation to practical implementation.
+
+If you have suggestions, improvements, or technical feedback, I would genuinely appreciate hearing them. Constructive input is always welcome.
+
+---
