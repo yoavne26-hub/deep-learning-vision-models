@@ -29,6 +29,9 @@ python MNISTtrainingNN.py
 ### Training Loss Curve
 ![Loss Curve](images/Dense NN2.png)
 
+### Example
+![Example](images/Dense NN3.png)
+
 ## Performance
 
 - Training Accuracy: 89.3%
