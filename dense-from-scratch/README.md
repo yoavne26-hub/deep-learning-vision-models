@@ -31,6 +31,7 @@ python MNISTtrainingNN.py
 
 
 ---
+---
 
 
 ## Results
