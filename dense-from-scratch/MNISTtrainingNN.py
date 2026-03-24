@@ -191,26 +191,10 @@ test_accuracy = evaluate_model(W1, b1, W2, b2, X_test, Y_test)
 print("Dev Accuracy:", dev_accuracy)
 print("Test Accuracy:", test_accuracy)
 
-def find_best_hidden_size(X_train, Y_train, X_val, Y_val, alpha, iterations, lambd, hidden_sizes):
-    best_size = None
-    best_accuracy = 0
-    results = []
 
-    for size in hidden_sizes:
-        print(f"\nTraining with hidden layer size = {size}")
-        W1, b1, W2, b2 = gradient_descent(X_train, Y_train, alpha, iterations, lambd, hidden_size=size)
-        acc = evaluate_model(W1, b1, W2, b2, X_val, Y_val)
-        results.append((size, acc))
-        print(f"Validation Accuracy: {acc:.4f}")
-        if acc > best_accuracy:
-            best_accuracy = acc
-            best_size = size
-
-    print(f"\n Best hidden size: {best_size} with accuracy: {best_accuracy:.4f}")
-    return best_size, results
 
 hidden_sizes = [128, 110]
-#best_size, results = find_best_hidden_size(X_train, Y_train, X_dev, Y_dev, alpha=0.1, iterations=500, lambd=0, hidden_sizes=hidden_sizes)
+
 
 def evaluate_model(W1, b1, W2, b2, X_val, Y_val):
     _, _, _, A2 = forward_prop(W1, b1, W2, b2, X_val)
@@ -222,26 +206,8 @@ def evaluate_model(W1, b1, W2, b2, X_val, Y_val):
     return get_accuracy(predictions, Y_val)
 
 
-def find_best_lambda(X_train, Y_train, X_val, Y_val, alpha, iterations, lambdas, hidden_size):
-    best_lambda = None
-    best_accuracy = 0
-    results = []
 
-    for lambd in lambdas:
-        print(f"Training with lambda = {lambd}")
-        W1, b1, W2, b2 = gradient_descent(X_train, Y_train, alpha, iterations, lambd, hidden_size)
-        acc = evaluate_model(W1, b1, W2, b2, X_val, Y_val)
-        results.append((lambd, acc))
-        print(f"Validation Accuracy: {acc:.4f}")
-        if acc > best_accuracy:
-            best_accuracy = acc
-            best_lambda = lambd
 
-    print(f"\n Best lambda: {best_lambda} with accuracy: {best_accuracy:.4f}")
-    return best_lambda, results
-
-#lambdas = [0.01, 0.1, 1, 2]
-#best_lambda, results = find_best_lambda(X_train, Y_train, X_test, Y_test, 0.1, 501, lambdas, 110)
 
 def make_predictions(X, W1, b1, W2, b2):
     _, _, _, A2 = forward_prop(W1, b1, W2, b2, X)
