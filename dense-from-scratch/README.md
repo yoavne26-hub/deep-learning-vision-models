@@ -753,13 +753,13 @@ This table is useful because it makes the complexity explosion very visible.
 | 128 | 0.028 | 0.023 | **+1,178.3%** |
 | 256 | 0.029 | 0.022 | **+2,456.9%** |
 
-This table is powerful because it answers:
+This table answers:
 
 > Is the performance gain proportional to the additional cost?
 
 In this project, the answer is generally:
 
-> **No — after a certain point, cost grows much faster than performance.**
+> **No  after a certain point, cost grows much faster than performance.**
 
 ---
 
