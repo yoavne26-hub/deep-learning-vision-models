@@ -654,17 +654,21 @@ In this project, this score tends to favor:
 
 You also added a second, stricter efficiency-style metric based on the idea:
 
+$$
 \[
 \text{Efficiency} \approx \frac{\text{Accuracy}}{\log(\text{Runtime}) + \log(\text{Params})}
 \]
+$$
 
 A robust implementation uses a safe version:
 
+$$
 \[
 \text{Log Efficiency} =
 \frac{\text{Accuracy}}
 {w_r \log(1 + \text{Runtime}) + w_p \log(1 + \text{Params})}
 \]
+$$
 
 In the current code, the default weights are:
 
@@ -714,21 +718,27 @@ If baseline value is \( B \) and candidate value is \( M \):
 
 #### Accuracy improvement
 
+$$
 \[
 \%\Delta_{\text{acc}} = \frac{M - B}{B} \times 100
 \]
+$$
 
 #### Runtime increase
 
+$$
 \[
 \%\Delta_{\text{runtime}} = \frac{M - B}{B} \times 100
 \]
+$$
 
 #### Parameter increase
 
+$$
 \[
 \%\Delta_{\text{params}} = \frac{M - B}{B} \times 100
 \]
+$$
 
 ### Parameter Ratio vs Baseline
 
