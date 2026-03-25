@@ -724,22 +724,26 @@ If the baseline value is $B$ and the candidate model value is $M$:
 
 If the baseline value is $B$ and the candidate model value is $M$:
 
+### Relative Improvement Formulas
+
+If the baseline value is $B$ and the candidate model value is $M$:
+
 #### Accuracy improvement
 
 $$
-\Delta_{\text{acc}}(\%) = \left( \frac{M - B}{B} \right) \times 100
+\Delta_{\text{acc}} = \left( \frac{M - B}{B} \right) \times 100
 $$
 
 #### Runtime increase
 
 $$
-\Delta_{\text{runtime}}(\%) = \left( \frac{M - B}{B} \right) \times 100
+\Delta_{\text{runtime}} = \left( \frac{M - B}{B} \right) \times 100
 $$
 
 #### Parameter increase
 
 $$
-\Delta_{\text{params}}(\%) = \left( \frac{M - B}{B} \right) \times 100
+\Delta_{\text{params}} = \left( \frac{M - B}{B} \right) \times 100
 $$
 
 ### Parameter Ratio vs Baseline
