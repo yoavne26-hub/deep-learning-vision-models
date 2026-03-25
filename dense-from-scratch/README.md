@@ -106,7 +106,7 @@ The implemented model is a **single-hidden-layer fully connected neural network*
 This means the architecture is:
 
 \[
-784 \rightarrow h \rightarrow 10
+784 -> h -> 10
 \]
 
 where \( h \in \{10, 64, 128, 256\} \).
@@ -475,7 +475,7 @@ A useful part of this project is comparing architectures not only by accuracy, b
 For a network:
 
 \[
-784 \rightarrow h \rightarrow 10
+784 -> h -> 10
 \]
 
 the total number of parameters is:
