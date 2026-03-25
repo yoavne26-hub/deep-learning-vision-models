@@ -453,11 +453,12 @@ This allows the true labels to match the 10-dimensional softmax output.
 
 ### Conceptual explanation of the code
 
-python
+```python
 def one_hot(Y, num_classes=10):
     one_hot_Y = np.zeros((num_classes, Y.size))
     one_hot_Y[Y.astype(int), np.arange(Y.size)] = 1
     return one_hot_Y
+```
 ### What happens mathematically?
 
 1. Create a matrix of zeros with shape:
