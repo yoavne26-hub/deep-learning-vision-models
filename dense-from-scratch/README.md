@@ -119,23 +119,23 @@ where \( h \in \{10, 64, 128, 256\} \).
 
 Let:
 
-- \( X \in \mathbb{R}^{784 \times m} \): input matrix for a batch of \( m \) examples
-- \( Y \): true labels
-- \( Y_{onehot} \in \mathbb{R}^{10 \times m} \): one-hot encoded labels
+- $X \in \mathbb{R}^{784 \times m}$: input matrix for a batch of $m$ examples
+- $Y$: true labels
+- $Y_{\text{onehot}} \in \mathbb{R}^{10 \times m}$: one-hot encoded labels
 
 Parameters:
 
-- \( W_1 \in \mathbb{R}^{h \times 784} \)
-- \( b_1 \in \mathbb{R}^{h \times 1} \)
-- \( W_2 \in \mathbb{R}^{10 \times h} \)
-- \( b_2 \in \mathbb{R}^{10 \times 1} \)
+- $W_1 \in \mathbb{R}^{h \times 784}$
+- $b_1 \in \mathbb{R}^{h \times 1}$
+- $W_2 \in \mathbb{R}^{10 \times h}$
+- $b_2 \in \mathbb{R}^{10 \times 1}$
 
 Intermediate values:
 
-- \( Z_1 \): hidden layer pre-activation
-- \( A_1 \): hidden layer activation
-- \( Z_2 \): output layer pre-activation
-- \( A_2 \): output probabilities after softmax
+- $Z_1$: hidden layer pre-activation
+- $A_1$: hidden layer activation
+- $Z_2$: output layer pre-activation
+- $A_2$: output probabilities after softmax
 
 ---
 
@@ -145,17 +145,17 @@ The network computes predictions in two stages.
 
 #### 1) Hidden layer linear transformation
 
-\[
-Z_1 = W_1 X + b_1
-\]
+$$
+Z_1 = W_1X + b_1
+$$
 
 This calculates a weighted sum of the inputs plus a bias term.
 
 #### 2) ReLU activation
 
-\[
+$$
 A_1 = \text{ReLU}(Z_1) = \max(0, Z_1)
-\]
+$$
 
 ReLU keeps positive values and sets negative values to zero.
 
@@ -163,23 +163,23 @@ This introduces **non-linearity**, which allows the model to learn more complex 
 
 #### 3) Output layer linear transformation
 
-\[
-Z_2 = W_2 A_1 + b_2
-\]
+$$
+Z_2 = W_2A_1 + b_2
+$$
 
 This maps the hidden representation into 10 class scores, one for each digit.
 
 #### 4) Softmax output
 
-\[
+$$
 A_2 = \text{softmax}(Z_2)
-\]
+$$
 
-For each class \( k \):
+For each class $k$:
 
-\[
+$$
 A_{2,k}^{(i)} = \frac{e^{Z_{2,k}^{(i)}}}{\sum_{j=1}^{10} e^{Z_{2,j}^{(i)}}}
-\]
+$$
 
 This converts raw scores into probabilities that sum to 1.
 
@@ -193,21 +193,25 @@ The project uses **Softmax + Cross-Entropy Loss**.
 
 For one example:
 
-\[
+$$
 L^{(i)} = - \sum_{k=1}^{10} y_k^{(i)} \log(a_k^{(i)})
-\]
+$$
 
 Since only one class is correct in one-hot encoding, this simplifies to:
 
-\[
+$$
 L^{(i)} = -\log(a_{\text{correct class}}^{(i)})
-\]
+$$
 
-For a batch of \( m \) examples:
+For a batch of $m$ examples:
 
-\[
-L_{\text{CE}} = -\frac{1}{m} \sum_{i=1}^{m} \sum_{k=1}^{10} y_k^{(i)} \log(a_k^{(i)})
-\]
+$$
+L_{\text{CE}} =
+-\frac{1}{m}
+\sum_{i=1}^{m}
+\sum_{k=1}^{10}
+y_k^{(i)} \log(a_k^{(i)})
+$$
 
 #### Interpretation
 
@@ -222,14 +226,18 @@ This is exactly what we want from a classification objective.
 
 To reduce overfitting and discourage excessively large weights, the project adds **L2 regularization**.
 
-\[
-L_{\text{reg}} = \frac{\lambda}{2m} \left( \|W_1\|_F^2 + \|W_2\|_F^2 \right)
-\]
+$$
+L_{\text{reg}} =
+\frac{\lambda}{2m}
+\left(
+\|W_1\|_F^2 + \|W_2\|_F^2
+\right)
+$$
 
 Where:
 
-- \( \lambda \) is the regularization strength
-- \( \|W\|_F^2 \) is the sum of squares of all entries in the weight matrix
+- $\lambda$ is the regularization strength
+- $\|W\|_F^2$ is the sum of squares of all entries in the weight matrix
 
 Bias terms are typically **not** regularized.
 
@@ -247,16 +255,24 @@ L2 regularization encourages smaller weights, which can:
 
 The full loss optimized by gradient descent is:
 
-\[
+$$
 J = L_{\text{CE}} + L_{\text{reg}}
-\]
+$$
 
 That is:
 
-\[
-J = -\frac{1}{m} \sum_{i=1}^{m} \sum_{k=1}^{10} y_k^{(i)} \log(a_k^{(i)})
-+ \frac{\lambda}{2m} \left( \|W_1\|_F^2 + \|W_2\|_F^2 \right)
-\]
+$$
+J =
+-\frac{1}{m}
+\sum_{i=1}^{m}
+\sum_{k=1}^{10}
+y_k^{(i)} \log(a_k^{(i)})
++
+\frac{\lambda}{2m}
+\left(
+\|W_1\|_F^2 + \|W_2\|_F^2
+\right)
+$$
 
 This is the actual objective minimized during training.
 
@@ -270,59 +286,59 @@ Because the output uses **Softmax + Cross-Entropy**, the derivative simplifies n
 
 #### 1) Output layer gradient
 
-\[
-dZ_2 = A_2 - Y_{onehot}
-\]
+$$
+dZ_2 = A_2 - Y_{\text{onehot}}
+$$
 
 This is one of the most important simplifications in neural networks.
 
-#### 2) Gradients for \( W_2 \) and \( b_2 \)
+#### 2) Gradients for $W_2$ and $b_2$
 
-\[
+$$
 dW_2 = \frac{1}{m} dZ_2 A_1^T + \frac{\lambda}{m} W_2
-\]
+$$
 
-\[
+$$
 db_2 = \frac{1}{m} \sum dZ_2
-\]
+$$
 
-The second term in \( dW_2 \) comes from L2 regularization.
+The second term in $dW_2$ comes from L2 regularization.
 
 #### 3) Propagate to hidden layer
 
-\[
+$$
 dA_1 = W_2^T dZ_2
-\]
+$$
 
 #### 4) ReLU derivative
 
 For ReLU:
 
-\[
+$$
 \text{ReLU}'(Z_1) =
 \begin{cases}
 1 & \text{if } Z_1 > 0 \\
 0 & \text{if } Z_1 \leq 0
 \end{cases}
-\]
+$$
 
 So:
 
-\[
+$$
 dZ_1 = dA_1 \odot \mathbf{1}(Z_1 > 0)
-\]
+$$
 
-Where \( \odot \) is elementwise multiplication.
+Where $\odot$ is elementwise multiplication.
 
-#### 5) Gradients for \( W_1 \) and \( b_1 \)
+#### 5) Gradients for $W_1$ and $b_1$
 
-\[
+$$
 dW_1 = \frac{1}{m} dZ_1 X^T + \frac{\lambda}{m} W_1
-\]
+$$
 
-\[
+$$
 db_1 = \frac{1}{m} \sum dZ_1
-\]
+$$
 
 Again, the regularization term appears only in the weight gradient.
 
@@ -332,23 +348,23 @@ Again, the regularization term appears only in the weight gradient.
 
 After computing gradients, parameters are updated using **gradient descent**:
 
-\[
+$$
 W_1 := W_1 - \alpha dW_1
-\]
+$$
 
-\[
+$$
 b_1 := b_1 - \alpha db_1
-\]
+$$
 
-\[
+$$
 W_2 := W_2 - \alpha dW_2
-\]
+$$
 
-\[
+$$
 b_2 := b_2 - \alpha db_2
-\]
+$$
 
-Where \( \alpha \) is the **learning rate**.
+Where $\alpha$ is the **learning rate**.
 
 ---
 
@@ -356,11 +372,11 @@ Where \( \alpha \) is the **learning rate**.
 
 These two hyperparameters are central to the project.
 
-#### Alpha (\( \alpha \)) = Learning Rate
+#### Alpha ($\alpha$) = Learning Rate
 
-\[
+$$
 \theta := \theta - \alpha \nabla J(\theta)
-\]
+$$
 
 Alpha controls **how big each update step is** during training.
 
@@ -382,13 +398,13 @@ Alpha controls **speed vs stability**.
 
 ---
 
-#### Lambda (\( \lambda \)) = Regularization Strength
+#### Lambda ($\lambda$) = Regularization Strength
 
 Lambda controls how strongly the model penalizes large weights:
 
-\[
+$$
 L_{\text{reg}} = \frac{\lambda}{2m}(\|W_1\|^2 + \|W_2\|^2)
-\]
+$$
 
 ##### If lambda is too small
 
@@ -420,7 +436,6 @@ Lambda controls **fit vs generalization**.
   - validation performance
 
 Together, they define a major part of the model’s training behavior.
-
 ---
 
 ## One-Hot Encoding
@@ -439,7 +454,7 @@ This allows the true labels to match the 10-dimensional softmax output.
 
 ### Conceptual explanation of the code
 
-```python
+python
 def one_hot(Y, num_classes=10):
     one_hot_Y = np.zeros((num_classes, Y.size))
     one_hot_Y[Y.astype(int), np.arange(Y.size)] = 1
