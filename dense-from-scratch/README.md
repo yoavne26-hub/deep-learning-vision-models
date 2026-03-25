@@ -596,7 +596,6 @@ Replace the example values below with the exact values printed by your current s
 If your code already prints or stores these values in `results`, this table should reflect those exact outputs.
 
 ---
-
 ## Efficiency Metrics
 
 A major extension in this project is that models are not compared only by accuracy.
@@ -615,9 +614,9 @@ This metric balances:
 
 Each metric is min-max normalized:
 
-\[
+$$
 x_{\text{norm}} = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
-\]
+$$
 
 This scales values into `[0,1]`.
 
@@ -625,12 +624,12 @@ For runtime and parameter count, **higher values are worse**, so they are subtra
 
 #### Formula
 
-\[
+$$
 \text{Efficiency Score} =
 w_{acc}\cdot \text{Acc}_{norm}
 - w_{time}\cdot \text{Time}_{norm}
 - w_{params}\cdot \text{Params}_{norm}
-\]
+$$
 
 Where the weights are chosen in code.
 
@@ -639,7 +638,6 @@ In the current code, the default weights are:
 - accuracy: `0.80`
 - runtime: `0.12`
 - params: `0.08`
-
 #### Interpretation
 
 This metric answers:
