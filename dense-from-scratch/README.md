@@ -624,12 +624,7 @@ For runtime and parameter count, **higher values are worse**, so they are subtra
 
 #### Formula
 
-$$
-\text{Efficiency Score} =
-w_{acc}\cdot \text{Acc}_{norm}
-- w_{time}\cdot \text{Time}_{norm}
-- w_{params}\cdot \text{Params}_{norm}
-$$
+$ \text{Efficiency Score} = w_{acc}\cdot \text{Acc}_{norm} - w_{time}\cdot \text{Time}_{norm} - w_{params}\cdot \text{Params}_{norm} $
 
 Where the weights are chosen in code.
 
