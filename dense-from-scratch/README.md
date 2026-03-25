@@ -43,7 +43,7 @@ This turns the project from a simple classifier into a small **model-selection a
 7. [Experiment Design](#experiment-design)
 8. [Architecture Comparison](#architecture-comparison)
 9. [Efficiency Metrics](#efficiency-metrics)
-10. [ Improvement vs Baseline](#-improvement-vs-baseline)
+10. [Improvement vs Baseline](#-improvement-vs-baseline)
 11. [Visualizations](#visualizations)
 12. [Key Findings](#key-findings)
 13. [How to Run](#how-to-run)
