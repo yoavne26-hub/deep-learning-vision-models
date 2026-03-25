@@ -704,7 +704,6 @@ Because there is **no single universal definition of “best model”**, differe
 That is one of the strongest conceptual parts of the project.
 
 ---
-
 ## Relative Improvement vs Baseline
 
 Another strong addition in the project is comparing every architecture **relative to the baseline** (`hidden_size = 10`).
