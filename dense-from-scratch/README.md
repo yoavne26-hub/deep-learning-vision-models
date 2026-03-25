@@ -43,7 +43,7 @@ This turns the project from a simple classifier into a small **model-selection a
 7. [Experiment Design](#experiment-design)
 8. [Architecture Comparison](#architecture-comparison)
 9. [Efficiency Metrics](#efficiency-metrics)
-10. [Relative Improvement vs Baseline](#relative-improvement-vs-baseline)
+10. [ Improvement vs Baseline](#-improvement-vs-baseline)
 11. [Visualizations](#visualizations)
 12. [Key Findings](#key-findings)
 13. [How to Run](#how-to-run)
@@ -710,18 +710,6 @@ That is one of the strongest conceptual parts of the project.
 Another strong addition in the project is comparing every architecture **relative to the baseline** (`hidden_size = 10`).
 
 This is much more informative than just looking at raw numbers.
-
-### Relative Improvement Formulas
-
-If baseline value is \( B \) and candidate value is \( M \):
-
-### Relative Improvement Formulas
-
-If the baseline value is $B$ and the candidate model value is $M$:
-
-### Relative Improvement Formulas
-
-If the baseline value is $B$ and the candidate model value is $M$:
 
 ### Relative Improvement Formulas
 
