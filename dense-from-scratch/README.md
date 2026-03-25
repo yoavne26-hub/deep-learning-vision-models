@@ -868,7 +868,7 @@ The larger model typically converges faster and reaches a higher validation ceil
 
 ### 9) Runtime Comparison Plot
 
-![Runtime Comparison](images/<your_runtime_plot_name>.png)
+![Runtime Comparison](images/Dense_NN9.png)
 
 **Interpretation:**  
 Shows the computational cost increase as hidden size grows.
@@ -877,7 +877,7 @@ Shows the computational cost increase as hidden size grows.
 
 ### 10) Log-Based Efficiency Score Plot
 
-![Log Efficiency Score](images/<your_log_efficiency_plot_name>.png)
+![Log Efficiency Score](images/Dense_NN10.png)
 
 **Interpretation:**  
 Highlights how a stricter “accuracy per cost” metric can favor smaller architectures.
