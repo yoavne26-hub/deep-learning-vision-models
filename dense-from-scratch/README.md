@@ -104,11 +104,9 @@ The implemented model is a **single-hidden-layer fully connected neural network*
 - `256`
 
 This means the architecture is:
-$
-\[
-784 -> h -> 10
-\]
-$
+
+$\[784 -> h -> 10\]$
+
 
 where $\( h \in \{10, 64, 128, 256\} \).$
 
