@@ -446,15 +446,15 @@ Example:
 
 - digit `3` becomes:
 
-\[
+$$
 [0,0,0,1,0,0,0,0,0,0]^T
-\]
+$$
 
 This allows the true labels to match the 10-dimensional softmax output.
 
 ### Conceptual explanation of the code
 
-python
+```python
 def one_hot(Y, num_classes=10):
     one_hot_Y = np.zeros((num_classes, Y.size))
     one_hot_Y[Y.astype(int), np.arange(Y.size)] = 1
@@ -463,23 +463,23 @@ def one_hot(Y, num_classes=10):
 
 1. Create a matrix of zeros with shape:
 
-\[
+$$
 (10, m)
-\]
+$$
 
 2. For each training example, place a `1` in the row corresponding to the correct digit.
 
 3. Keep the final shape aligned with the network output:
 
-\[
+$$
 A_2 \in \mathbb{R}^{10 \times m}
-\]
+$$
 
 This is why subtraction in backprop works cleanly:
 
-\[
-dZ_2 = A_2 - Y_{onehot}
-\]
+$$
+dZ_2 = A_2 - Y_{\text{onehot}}
+$$
 
 ---
 
@@ -489,37 +489,37 @@ A useful part of this project is comparing architectures not only by accuracy, b
 
 For a network:
 
-\[
-784 -> h -> 10
-\]
+$$
+784 \rightarrow h \rightarrow 10
+$$
 
 the total number of parameters is:
 
-\[
+$$
 \text{Params} = (784h + h) + (10h + 10)
-\]
+$$
 
 Breaking it down:
 
-- \( W_1 \): `h × 784`
-- \( b_1 \): `h`
-- \( W_2 \): `10 × h`
-- \( b_2 \): `10`
+- $W_1$: `h × 784`
+- $b_1$: `h`
+- $W_2$: `10 × h`
+- $b_2$: `10`
 
 So:
 
-\[
+$$
 \text{Params} = 784h + h + 10h + 10 = 795h + 10
-\]
+$$
 
 ### Parameter Counts by Hidden Size
 
 | Hidden Size | Formula | Total Parameters |
 |---:|---:|---:|
-| 10  | \(795 \cdot 10 + 10\) | **7,960** |
-| 64  | \(795 \cdot 64 + 10\) | **50,890** |
-| 128 | \(795 \cdot 128 + 10\) | **101,770** |
-| 256 | \(795 \cdot 256 + 10\) | **203,530** |
+| 10  | $795 \cdot 10 + 10$ | **7,960** |
+| 64  | $795 \cdot 64 + 10$ | **50,890** |
+| 128 | $795 \cdot 128 + 10$ | **101,770** |
+| 256 | $795 \cdot 256 + 10$ | **203,530** |
 
 ### Interpretation
 
