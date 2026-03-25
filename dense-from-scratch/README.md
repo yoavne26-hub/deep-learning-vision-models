@@ -578,7 +578,7 @@ The hidden-layer sweep helps answer a practical question:
 
 - Training Accuracy: **89.3%**
 - Validation Accuracy: **86.8%**
-- Test Accuracy: **89.9%**
+- Test Accuracy: **86.7%**
 
 This model is intentionally small and acts as the comparison anchor for the rest of the study.
 
