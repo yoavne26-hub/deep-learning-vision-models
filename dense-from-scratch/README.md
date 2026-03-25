@@ -925,22 +925,12 @@ This is exactly how real model selection often works in practice.
 
 ## Conclusion
 
-This project demonstrates more than how to classify handwritten digits.
+This project became much more than an attempt to classify handwritten digits. What started as a dense neural network built from scratch turned into a deeper learning process about how neural networks actually work, both mathematically and practically.
 
-It shows how to:
+Building the model manually in NumPy made every part of the training process visible. Instead of treating the network as a black box, I had to understand how the data moves through the layers, how the activations are computed, how the loss is formed, and how backpropagation translates prediction errors into weight updates. That made the learning process far more meaningful, because every improvement in the code was tied to a clearer understanding of the mathematics behind it.
 
-- build a neural network from scratch
-- understand the mathematics behind learning
-- analyze architecture tradeoffs
-- compare models using both performance and efficiency
-- think about machine learning as an optimization problem, not just a leaderboard problem
+Another important thing I learned from this project is that better performance is not only about making the model larger. Increasing the hidden-layer size improved the results, but only up to a certain point. After that, the gains became smaller while the computational cost grew much faster. This made the comparison between hidden sizes especially valuable, because it showed that model design is really about tradeoffs. A model can be stronger in accuracy, but weaker in efficiency, and that distinction matters.
 
-From a portfolio perspective, this makes the project stronger than a standard “MNIST classifier” because it combines:
+The most interesting part of the project was seeing that different evaluation criteria can lead to different conclusions. When looking only at validation accuracy, one model appeared to be the strongest. But when runtime and parameter count were included, the picture became more nuanced. That helped me understand that choosing a model is not just a technical step after training, but part of the learning problem itself.
 
-- mathematical understanding
-- manual implementation
-- experimental comparison
-- model-selection reasoning
-- efficiency analysis
-
-That combination makes it much closer to the kind of thinking used in real-world data science, machine learning, and optimization work.
+Overall, this project taught me not only how a dense neural network learns, but also how to think more carefully about model selection, efficiency, and practical decision-making in machine learning. That made the project feel less like a standard MNIST exercise and more like a real study of how design choices affect both performance and cost.
