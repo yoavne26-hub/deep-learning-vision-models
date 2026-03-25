@@ -718,27 +718,27 @@ If baseline value is \( B \) and candidate value is \( M \):
 
 #### Accuracy improvement
 
-$
+
 \[
 \%\Delta_{\text{acc}} = \frac{M - B}{B} \times 100
 \]
-$
+
 
 #### Runtime increase
 
-$
+
 \[
 \%\Delta_{\text{runtime}} = \frac{M - B}{B} \times 100
 \]
-$
+
 
 #### Parameter increase
 
-$
+
 \[
 \%\Delta_{\text{params}} = \frac{M - B}{B} \times 100
 \]
-$
+
 
 ### Parameter Ratio vs Baseline
 
