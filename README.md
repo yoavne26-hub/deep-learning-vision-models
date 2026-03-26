@@ -41,6 +41,9 @@ The progression reflects a deliberate transition from mathematical foundations (
 Each project in this repository follows a structured experimental workflow:
 
 ### 1. Data Preparation
+- Data location:
+- Digit mnist: https://www.kaggle.com/datasets/oddrationale/mnist-in-csv
+- Sign language: https://www.kaggle.com/datasets/datamunge/sign-language-mnist
 - Dataset loading and normalization
 - Label remapping where required
 - Train / validation / test splitting
