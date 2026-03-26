@@ -75,30 +75,33 @@ This structured pipeline was consistently applied across all implementations to 
 
 The early stages of this repository focus on understanding neural networks at a mathematical level.
 
-Key theoretical components implemented manually:
+Key theoretical components implemented manually include:
 
-- Linear transformations:  
+- **Linear transformations:**
+
   $$
-   \( Z = W X + b \)
+  Z = WX + b
   $$
 
-- Activation functions (ReLU, Softmax)
+- **Activation functions:** ReLU and Softmax
 
-- Cross-Entropy Loss:  
- $$
- \( L = - \sum y \log(\hat{y}) \)
- $$
+- **Cross-Entropy Loss:**
 
-- Backpropagation using chain rule differentiation
+  $$
+  L = - \sum y \log(\hat{y})
+  $$
 
-- Gradient descent updates:  
- $$
- \( W := W - \alpha \frac{\partial L}{\partial W} \)
- $$
+- **Backpropagation** through chain rule differentiation
 
-The NumPy implementations avoid automatic differentiation entirely, reinforcing a deep understanding of gradient flow, tensor shapes, and optimization mechanics before transitioning to PyTorch.
+- **Gradient descent updates:**
 
-This progression ensures conceptual mastery rather than framework dependency.
+  $$
+  W := W - \alpha \frac{\partial L}{\partial W}
+  $$
+
+By avoiding automatic differentiation in the NumPy implementation, the project makes the learning process more explicit and helps build a clearer understanding of gradient flow, tensor shapes, and optimization mechanics before moving to PyTorch.
+
+This progression emphasizes conceptual understanding rather than framework dependency.
 
 ---
 
