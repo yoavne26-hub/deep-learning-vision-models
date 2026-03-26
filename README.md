@@ -75,17 +75,17 @@ The early stages of this repository focus on understanding neural networks at a 
 Key theoretical components implemented manually:
 
 - Linear transformations:  
-  \( Z = W X + b \)
+  $ \( Z = W X + b \) $
 
 - Activation functions (ReLU, Softmax)
 
 - Cross-Entropy Loss:  
-  \( L = - \sum y \log(\hat{y}) \)
+ $ \( L = - \sum y \log(\hat{y}) \) $
 
 - Backpropagation using chain rule differentiation
 
 - Gradient descent updates:  
-  \( W := W - \alpha \frac{\partial L}{\partial W} \)
+ $ \( W := W - \alpha \frac{\partial L}{\partial W} \) $
 
 The NumPy implementations avoid automatic differentiation entirely, reinforcing a deep understanding of gradient flow, tensor shapes, and optimization mechanics before transitioning to PyTorch.
 
