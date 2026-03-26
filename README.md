@@ -88,7 +88,7 @@ Key theoretical components implemented manually include:
 - **Cross-Entropy Loss:**
 
   $$
-  L = - {\sum y \log(\hat{y})}
+  L = - \sum y \log(\hat{y})
   $$
 
 - **Backpropagation** through chain rule differentiation
@@ -96,7 +96,7 @@ Key theoretical components implemented manually include:
 - **Gradient descent updates:**
 
   $$
-  W := W - {\alpha \frac{\partial L}{\partial W}}
+  W := W - \alpha \frac{\partial L}{\partial W}
   $$
 
 By avoiding automatic differentiation in the NumPy implementation, the project makes the learning process more explicit and helps build a clearer understanding of gradient flow, tensor shapes, and optimization mechanics before moving to PyTorch.
